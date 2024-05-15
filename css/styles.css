@@ -1,0 +1,473 @@
+/* ========== GLOBAL ======================================== */
+body {
+  font-family: Roboto, sans-serif;
+  color: #2c2c2c;
+  background-color: #ffffff;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+button {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #2c2c2c;
+  cursor: pointer;
+}
+
+a {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ========== HEADER ======================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background-color: #fefefe;
+
+  box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
+}
+
+.container {
+  width: 320px;
+  padding: 10px 20px;
+  margin: 0 auto;
+}
+
+.container-header-nav {
+  display: none;
+}
+
+.home {
+  height: 52px;
+}
+
+.page-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========== MOBILE MENU HEADER ======================================== */
+.burger-menu {
+  border: none;
+  background-color: transparent;
+  width: 52px;
+  height: 52px;
+  padding: 12px;
+}
+
+.modal-menu {
+  position: absolute;
+  top: 40px;
+  right: 12px;
+  z-index: 10;
+  border-radius: 30px 0 30px 30px;
+  width: 130px;
+  height: 255px;
+  box-shadow: 0 4px 24px 0 rgba(105, 105, 105, 0.1);
+  background: #fefefe;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-close-burger-menu {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+.item-mobile-nav {
+  padding: 16px 10px 16px 16px;
+}
+
+/* ========== MAIN ======================================== */
+.page-main {
+  margin-top: 72px;
+}
+/* ========== HERO ======================================== */
+.section-hero {
+  padding: 60px 20px 50px;
+  margin: 0 auto;
+}
+
+.title-hero {
+  margin-bottom: 28px;
+}
+
+.description-hero {
+  margin-bottom: 32px;
+}
+
+.hero-btn {
+  border: none;
+  border-radius: 30px;
+  padding: 6px 17px;
+  background: #bbf330;
+  min-width: 98px;
+  min-height: 32px;
+}
+
+.list-hero {
+  display: none;
+}
+
+/* ========== OFFERINGS ======================================== */
+.section-offerings {
+  background: url(../images/mobile/offerings.png) no-repeat;
+  padding: 41px 20px 72px;
+}
+
+.image-offerings {
+  margin-bottom: 60px;
+}
+
+.title-offerings {
+  margin-bottom: 28px;
+}
+
+.description-offerings {
+  margin-bottom: 28px;
+}
+
+.list-offerings {
+  margin-bottom: 28px;
+}
+
+.item-oferings:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.container-icon-offerings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-bottom: 8px;
+}
+
+.title-item-oferings {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.btn-offerings {
+  background: #ffffff;
+  border: 2px solid #7eb101;
+  border-radius: 30px;
+  padding: 10px 20px;
+  min-width: 106px;
+  min-height: 40px;
+  margin-right: 24px;
+}
+
+.link-offerings-more {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 2px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.icon-arrow-right {
+  fill: transparent;
+}
+
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: url(../images/mobile/offerings@2.png);
+  }
+}
+
+/* ========== FAVORITS ======================================== */
+.section-favorits {
+  padding: 60px 20px;
+}
+
+.title-favorits {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.description-favorits {
+  text-align: center;
+  margin-bottom: 60px;
+  line-height: 1.14;
+}
+
+.item-favorits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 282px;
+  border: 11px solid #ffe550;
+  border-radius: 50%;
+}
+
+.item-favorits:not(:nth-child(3)) {
+  margin-bottom: 20px;
+}
+
+.item-favorits:nth-child(4),
+.item-favorits:nth-child(5),
+.item-favorits:nth-child(6) {
+  display: none;
+}
+
+/* ========== REVIEWS ======================================== */
+.section-reviews {
+  padding: 60px 20px;
+  background: url(../images/mobile/reviews.png) no-repeat;
+}
+
+.title-reviews {
+  margin-bottom: 20px;
+}
+
+.description-reviews {
+  margin-bottom: 32px;
+}
+
+.item-reviews {
+  padding: 8px;
+  background: #fefefe;
+  border-radius: 0 30px 30px;
+}
+
+.item-reviews:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.list-rating {
+  display: flex;
+  gap: 4px;
+  height: 16px;
+  margin-bottom: 28px;
+}
+
+.response-item-reviews {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.people-reviews {
+  display: flex;
+  align-items: center;
+}
+
+.foto {
+  margin-right: 16px;
+}
+
+.description-people {
+  align-content: center;
+}
+
+.people-reviews::after {
+  content: '';
+  border: 0.85px solid #7eb101;
+  width: 52px;
+  height: 0px;
+  transform: rotate(-90deg);
+  margin-left: -11px;
+}
+
+.name-people-reviews {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (min-resolution: 192dpi) {
+  .section-reviews {
+    background: url(../images/mobile/reviews@2.png) no-repeat;
+  }
+}
+
+/* ========== SUBSCRIPTION ======================================== */
+.section-subscription {
+  margin-top: -55px;
+  padding: 0 20px 60px;
+}
+.image-section-subscription {
+  margin-bottom: 17px;
+}
+
+.title-subscription {
+  margin-bottom: 20px;
+}
+
+.description-subscription {
+  line-height: 1.14;
+  margin-bottom: 40px;
+}
+
+.input-field-email {
+  height: 42px;
+  border: 0.85px solid #ffe550;
+  border-radius: 30px;
+  padding: 10px;
+  width: 279px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #505050;
+  margin-bottom: 20px;
+}
+
+.btn-subscription {
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  min-width: 103px;
+  height: 42px;
+  background: #bbf330;
+}
+
+/* ========== FOOTER ======================================== */
+.site-footer {
+  padding: 60px 20px;
+  background: url(../images/mobile/apple-b.png) 0 20.6% no-repeat,
+    url(../images/mobile/citruc-b.png) 100% 0 no-repeat,
+    url(../images/mobile/apple-banan-b.png) 50% 100% no-repeat;
+  box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
+}
+
+.menu-logo-nav {
+  display: flex;
+  gap: 46px;
+  margin-bottom: 40px;
+}
+
+.list-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 1;
+}
+
+.link-list-nav {
+  font-size: 14px;
+  color: #000;
+}
+
+.form-label-subscribe {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-input-email {
+  min-height: 42px;
+  border: 0.85px solid #ffe550;
+  border-radius: 30px;
+  padding: 10px;
+  min-width: 279px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #505050;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-btn-subscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.85px solid #7eb101;
+  border-radius: 30px;
+  padding: 10px 20px;
+  min-width: 103px;
+  height: 35px;
+  background: transparent;
+  margin-bottom: 24px;
+}
+
+.description-footer {
+  font-size: 10px;
+  margin-bottom: 60px;
+}
+
+.list-documention {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  line-height: 1;
+}
+
+.site-documention {
+  font-size: 10px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #7eb101;
+}
+
+.description-page-footer {
+  font-size: 10px;
+}
+
+@media (min-resolution: 192dpi) {
+  .site-footer {
+    background: url(../images/mobile/apple-b@2.png) 0 20.6% no-repeat,
+      url(../images/mobile/citrus-b@2.png) 100% 0 no-repeat,
+      url(../images/mobile/apple-banan-b@2.png) 50% 100% no-repeat;
+  }
+}
