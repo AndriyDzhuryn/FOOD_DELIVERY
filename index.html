@@ -25,39 +25,39 @@
     <header class="site-header">
 
 	    <div class="page-header container">
-				<a class="home" href="./index.html">
-          <svg class="logo" width="66" height="52">
-            <use href="./images/food_delivery.svg#logo"></use>
-          </svg>
-        </a>
+					<a class="home" href="./index.html">
+          	<svg class="logo" width="66" height="52">
+            	<use href="./images/food_delivery.svg#logo"></use>
+          	</svg>
+        	</a>
 
-        <div class="container-header-nav">
-          <nav class="header-nav">
-            <ul class="list-nav">
-              <li class="item-list-nav">
-                <a class="link-list-nav" href="">Home</a>
-              </li>
+        	<div class="container-header-nav">
+          	<nav class="header-nav">
+            	<ul class="header-list-nav">
+              	<li class="header-item-nav page-active">
+                	<a class="header-link-item-nav" href="">Home</a>
+              	</li>
 
-              <li class="item-list-nav">
-                <a class="link-list-nav" href="">About</a>
-              </li>
+              	<li class="header-item-nav">
+                	<a class="header-link-item-nav" href="">About</a>
+              	</li>
 
-              <li class="item-list-nav">
-                <a class="link-list-nav" href="">Service</a>
-              </li>
+              	<li class="header-item-nav">
+                	<a class="header-link-item-nav" href="">Service</a>
+              	</li>
 
-              <li class="item-list-nav">
-                <a class="link-list-nav" href="">Menu</a>
-              </li>
+              	<li class="header-item-nav">
+                	<a class="header-link-item-nav" href="">Menu</a>
+              	</li>
 
-              <li class="item-list-nav">
-                <a class="link-list-nav" href="">Contact</a>
-              </li>
-            </ul>
-          </nav>
+              	<li class="header-item-nav">
+                	<a class="header-link-item-nav" href="">Contact</a>
+              	</li>
+            	</ul>
+          	</nav>
 
-          <button class="header-button" type="button">Order Now</button>
-        </div>
+          	<button class="header-btn" type="button">Order Now</button>
+					</div>
 
 				<!-- ========== MODAL MENU ============================== -->
 
@@ -67,7 +67,7 @@
           </svg>
         </button>
 
-        <div class="modal-menu">
+        <div class="modal-menu is-open">
           <div class="mobile-menu">
 						<button class="btn-close-burger-menu">
 							<svg class="icon-close-menu" width="28" height="28">
@@ -77,7 +77,7 @@
 
 					  <nav class="header-mobile-nav">
             <ul class="list-mobile-nav">
-              <li class="item-mobile-nav">
+              <li class="item-mobile-nav click-home">
                 <a class="link-mobile-nav" href="">Home</a>
               </li>
 
@@ -103,7 +103,6 @@
     </header>
 
     <!-- ========== MAIN ========== -->
-    <main class="page-main">
       <!-- ========== HERO ========== -->
       <section class="section-hero container">
         <h2 class="title-hero">Enjoy Your Favorite Food From Anywhere</h2>
@@ -115,36 +114,66 @@
         </p>
         <button class="hero-btn" type="button">Order Now</button>
         <ul class="list-hero">
-          <li class="item-hero">
+          <li class="item-hero item-hero-visible">
             <img
-              src="./images/falafel.png"
+						srcset="./images/tablet/falafel.png 1x, ./images/tablet/falafel@2.png 2x"
+              src="./images/tablet/falafel.png"
               alt="falafel"
-              width="528"
-              height="528"
             />
           </li>
-          <li class="item-hero">
+          <!-- <li class="item-hero item-hero-hidden">
             <img
-              src="./images/salad.png"
+						srcset="./images/tablet/salad.png 1x, ./images/tablet/salad@2.png 2x"
+              src="./images/tablet/salad.png"
               alt="salad"
-              width="528"
-              height="528"
             />
           </li>
-          <li class="item-hero">
-            <img src="./images/egg.png" alt="egg" width="528" height="528" />
-          </li>
+          <li class="item-hero item-hero-hidden">
+            <img 
+						srcset="./images/tablet/egg.png 1x, ./images/tablet/egg@2.png 2x"
+						src="./images/tablet/egg.png" 
+						alt="egg" 
+						/>
+          </li> -->
         </ul>
       </section>
 
       <!-- ========== Offerings ========== -->
       <section class="section-offerings container">
         <img
-          class="image-offerings"
+          class="image-mobile-offerings"
 					srcset="./images/mobile/Apple.png 1x, ./images/mobile/Apple@2.png 2x"
           src="./images/mobile/Apple.png"
           alt="apple"
         />
+				<div class="container-image-tablet-offerings">
+					<img
+          class="image-tablet-offerings"
+					srcset="./images/tablet/Ellipse.png 1x, ./images/tablet/Ellipse@2.png 2x"
+          src="./images/tablet/Ellipse.png"
+          alt=""
+        	/>
+					<img
+          class="image-tablet-offerings"
+					srcset="./images/tablet/big-apple.png 1x, ./images/tablet/big-apple@2.png 2x"
+          src="./images/tablet/big-apple.png"
+          alt="apple"
+        	/>
+					<img
+          class="image-tablet-offerings"
+					srcset="./images/tablet/medium-apple.png 1x, ./images/tablet/medium-apple@2.png 2x"
+          src="./images/tablet/medium-apple.png"
+          alt="apple"
+        	/>
+					<img
+          class="image-tablet-offerings"
+					srcset="./images/tablet/little-apple.png 1x, ./images/tablet/little-apple@2.png 2x"
+          src="./images/tablet/little-apple.png"
+          alt="apple"
+        	/>
+					</div>
+
+				
 
         <h2 class="title-offerings">What’s Special About Our Offerings</h2>
         <p class="description-offerings">
@@ -402,25 +431,25 @@ in eros elementum tristique.
         	</a>
 
         	<nav class="footer-nav">
-        		<ul class="list-nav">
+        		<ul class="footer-list-nav">
           		<li class="item-list-nav">
-            		<a class="link-list-nav" href="">Home</a>
+            		<a class="footer-link-item-nav" href="">Home</a>
           		</li>
 
           		<li class="item-list-nav">
-           	  	<a class="link-list-nav" href="">About</a>
+           	  	<a class="footer-link-item-nav" href="">About</a>
          	  	</li>
 
           		<li class="item-list-nav">
-            		<a class="link-list-nav" href="">Service</a>
+            		<a class="footer-link-item-nav" href="">Service</a>
           		</li>
 
           		<li class="item-list-nav">
-            		<a class="link-list-nav" href="">Menu</a>
+            		<a class="footer-link-item-nav" href="">Menu</a>
           		</li>
 
           		<li class="item-list-nav">
-            		<a class="link-list-nav" href="">Contact</a>
+            		<a class="footer-link-item-nav" href="">Contact</a>
           		</li>
         		</ul>
       		</nav>
