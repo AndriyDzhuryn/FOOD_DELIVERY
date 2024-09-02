@@ -22,8 +22,6 @@ button {
 }
 
 a {
-  font-weight: 400;
-  font-size: 16px;
   text-decoration: none;
   color: inherit;
 }
@@ -131,6 +129,18 @@ img {
   background: #bbf330;
 }
 
+.click-about:active,
+.click-service:active,
+.click-menu:active {
+  border-radius: none;
+  background: #bbf330;
+}
+
+.click-contact:active {
+  border-radius: 0 0 30px 30px;
+  background: #bbf330;
+}
+
 @media (max-width: 767px) {
   .container-header-nav {
     display: none;
@@ -153,11 +163,12 @@ img {
   .header-list-nav {
     display: flex;
     gap: 28px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
   }
 
-  .page-active {
+  .header-item-nav:hover {
+    font-weight: 700;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #bbf330;
@@ -180,6 +191,15 @@ img {
     display: none;
   }
 }
+
+/* ========== HEADER 1280px ======================================== */
+@media (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    padding: 10px 16px;
+  }
+}
+
 /* ========== MAIN ======================================== */
 /* ========== HERO ======================================== */
 .section-hero {
@@ -205,6 +225,10 @@ img {
   min-height: 32px;
 }
 
+.hero-btn:hover {
+  background-color: #ffe450;
+}
+
 @media (max-width: 767px) {
   .list-hero {
     display: none;
@@ -215,7 +239,7 @@ img {
 @media (min-width: 768px) {
   .section-hero {
     position: relative;
-    padding: 60px 32px 0;
+    padding: 60px 32px 12px;
   }
 
   .title-hero {
@@ -236,8 +260,35 @@ img {
     top: 149px;
     right: 40px;
     display: inline-block;
+    width: 292px;
     border-radius: 50%;
     border: 14px solid #ffe550;
+  }
+}
+
+/* ========== HERO 1280px ======================================== */
+@media (min-width: 1280px) {
+  .section-hero {
+    padding: 14px 30px 0 16px;
+  }
+
+  .title-hero {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-top: 159px;
+    margin-bottom: 28px;
+    width: 502px;
+  }
+
+  .description-hero {
+    width: 511px;
+  }
+
+  .item-hero {
+    top: 14px;
+    width: 528px;
+    border: 26px solid #ffe550;
   }
 }
 
@@ -318,8 +369,9 @@ img {
 }
 
 @media (min-resolution: 192dpi) {
-  .hero {
+  .section-offerings {
     background: url(../images/mobile/offerings@2.png) no-repeat;
+    background-size: contain;
   }
 }
 
@@ -327,8 +379,9 @@ img {
 @media (min-width: 768px) {
   .section-offerings {
     background: url(../images/tablet/offerings-b.png) no-repeat;
+    background-size: cover;
     padding: 150px 32px 88px;
-    margin-top: -30px;
+    margin-top: -75px;
   }
 
   .title-offerings {
@@ -356,18 +409,13 @@ img {
   }
 
   .item-oferings:nth-child(2) {
-    width: 252px;
+    width: 253px;
   }
 
   .item-oferings:not(:last-child) {
     margin-bottom: 0;
   }
 
-  .title-item-offerings {
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1279px) {
   .image-mobile-offerings {
     display: none;
   }
@@ -400,9 +448,69 @@ img {
     top: 190px;
     right: 0;
   }
+}
 
+@media (min-width: 768px) and (max-width: 1279px) {
   .image-desktop-offerings {
     display: none;
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .section-offerings {
+    background: url(../images/tablet/offerings-b@2.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+/* ========== OFFERINGS 1280px ======================================== */
+@media (min-width: 1280px) {
+  .section-offerings {
+    background: url(../images/desktop/offerings-b.png) no-repeat;
+    padding: 177px 16px 43px;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container-offerings-description {
+    margin-top: 99px;
+    margin-left: 90px;
+  }
+
+  .title-offerings {
+    line-height: 1.2;
+  }
+
+  .description-offerings {
+    margin-bottom: 40px;
+  }
+
+  .item-oferings:nth-child(1) {
+    width: 253px;
+  }
+
+  .title-item-oferings {
+    line-height: 1.4;
+  }
+
+  .description-item-offerings {
+    line-height: 1.5;
+  }
+
+  .link-offerings-more {
+    display: none;
+  }
+
+  .image-tablet-offerings {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) and (min-resolution: 192dpi) {
+  .section-offerings {
+    background: url(../images/desktop/offerings-b@2.png) no-repeat;
+    background-size: contain;
   }
 }
 
@@ -432,20 +540,86 @@ img {
   border-radius: 50%;
 }
 
-.item-favorits:not(:nth-child(3)) {
-  margin-bottom: 20px;
+@media (max-width: 767px) {
+  .item-favorits:not(:nth-child(3)) {
+    margin-bottom: 20px;
+  }
+
+  .item-favorits:nth-child(4),
+  .item-favorits:nth-child(5),
+  .item-favorits:nth-child(6) {
+    display: none;
+  }
 }
 
-.item-favorits:nth-child(4),
-.item-favorits:nth-child(5),
-.item-favorits:nth-child(6) {
-  display: none;
+/* ========== FAVORITS 768px ======================================== */
+@media (min-width: 768px) {
+  .section-favorits {
+    padding: 100px 32px;
+  }
+
+  .title-favorits {
+    font-weight: 700;
+    font-size: 42px;
+  }
+
+  .description-favorits {
+    font-size: 16px;
+  }
+
+  .list-favorits {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .item-favorits {
+    position: relative;
+    width: 336px;
+    height: 338px;
+    border: 14px solid #ffe550;
+  }
+  .link-favorits-food {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ========== FAVORITS 1280px ======================================== */
+@media (min-width: 1280px) {
+  .section-favorits {
+    padding: 100px 16px;
+  }
+
+  .description-favorits {
+    margin-bottom: 40px;
+  }
+
+  .list-favorits {
+    gap: 31px;
+  }
+
+  .item-favorits {
+    position: relative;
+    width: 395px;
+    height: 397px;
+    border: 16px solid #ffe550;
+  }
+
+  .link-favorits-food {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* ========== REVIEWS ======================================== */
 .section-reviews {
   padding: 60px 20px;
   background: url(../images/mobile/reviews.png) no-repeat;
+  background-size: contain;
 }
 
 .title-reviews {
@@ -483,6 +657,7 @@ img {
 .people-reviews {
   display: flex;
   align-items: center;
+  padding: 2px;
 }
 
 .foto {
@@ -511,6 +686,130 @@ img {
 @media (min-resolution: 192dpi) {
   .section-reviews {
     background: url(../images/mobile/reviews@2.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+/* ========== REVIEWS 768px ======================================== */
+@media (min-width: 768px) {
+  .section-reviews {
+    padding: 60px 32px 120px;
+    background: url(../images/tablet/tablet-reviews-b.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .title-reviews {
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .description-reviews {
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+
+  .list-reviews {
+    display: flex;
+    justify-content: center;
+  }
+
+  .item-reviews {
+    padding: 12px;
+    width: 336px;
+    height: 244px;
+    background: #fefefe;
+    border-radius: 0 30px 30px;
+  }
+
+  .item-reviews:not(:last-child) {
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+
+  .list-rating {
+    display: flex;
+    gap: 4px;
+    height: 16px;
+    margin-bottom: 28px;
+  }
+
+  .response-item-reviews {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+
+  .people-reviews {
+    display: flex;
+    align-items: center;
+  }
+
+  .foto {
+    margin-right: 16px;
+  }
+
+  .description-people {
+    align-content: center;
+  }
+
+  .people-reviews::after {
+    content: '';
+    border: 0.85px solid #7eb101;
+    width: 52px;
+    height: 0px;
+    transform: rotate(-90deg);
+    margin-left: -11px;
+  }
+
+  .name-people-reviews {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .description-item-reviews {
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .section-reviews {
+    background: url(../images/tablet/tablet-reviews-b@2.png) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+/* ========== REVIEWS 1280px ======================================== */
+@media (min-width: 1280px) {
+  .section-reviews {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    padding-left: 16px;
+    background: url(../images/desktop/desktop-reviews-b.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .list-reviews {
+    justify-content: flex-start;
+  }
+
+  .item-reviews {
+    padding: 14px;
+    width: 501px;
+    height: 227px;
+  }
+
+  .item-reviews:not(:last-child) {
+    margin-right: 139px;
+  }
+}
+
+@media (min-width: 1280px) and (min-resolution: 192dpi) {
+  .section-reviews {
+    background: url(../images/desktop/desktop-reviews-b@2.png) no-repeat;
+    background-size: 100% 100%;
   }
 }
 
@@ -532,12 +831,18 @@ img {
   margin-bottom: 40px;
 }
 
+.subscription-form-input-email {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .input-field-email {
   height: 42px;
   border: 0.85px solid #ffe550;
   border-radius: 30px;
   padding: 10px;
-  width: 279px;
+  width: 278px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
@@ -549,18 +854,82 @@ img {
   border: none;
   border-radius: 30px;
   padding: 10px 20px;
-  min-width: 103px;
+  width: 103px;
   height: 42px;
   background: #bbf330;
 }
 
+/* ========== SUBSCRIPTION 768px ======================================== */
+
+@media (min-width: 768px) {
+  .section-subscription {
+    margin-top: -71px;
+    padding: 0 32px 100px;
+  }
+
+  .image-section-subscription {
+    display: block;
+    margin-left: 440px;
+    margin-bottom: 20px;
+  }
+
+  .title-subscription {
+    font-size: 42px;
+  }
+
+  .description-subscription {
+    font-size: 16px;
+    line-height: 1.5;
+    width: 520px;
+    margin-bottom: 24px;
+  }
+
+  .subscription-form-input-email {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .input-field-email {
+    width: 394px;
+    margin-right: 22px;
+    margin-bottom: 0;
+  }
+}
+
+/* ========== SUBSCRIPTION 1280px ======================================== */
+
+@media (min-width: 1280px) {
+  .section-subscription {
+    position: relative;
+    margin-top: -20px;
+    padding: 0 17px 100px;
+  }
+
+  .image-section-subscription {
+    position: absolute;
+    top: -46px;
+    right: 16px;
+  }
+
+  .description-subscription {
+    width: 532px;
+    margin-bottom: 24px;
+  }
+
+  .input-field-email {
+    margin-right: 32px;
+  }
+}
+
 /* ========== FOOTER ======================================== */
-.site-footer {
-  padding: 60px 20px;
-  background: url(../images/mobile/apple-b.png) 0 20.6% no-repeat,
-    url(../images/mobile/citruc-b.png) 100% 0 no-repeat,
-    url(../images/mobile/apple-banan-b.png) 50% 100% no-repeat;
-  box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
+@media (max-width: 767px) {
+  .site-footer {
+    padding: 60px 20px;
+    background: url(../images/mobile/citrus-b@2.png) 100% 0 / 30% no-repeat,
+      url(../images/mobile/apple-b@2.png) 0 25% / 30% no-repeat,
+      url(../images/mobile/apple-banan-b@2.png) 50% 100% / 75% no-repeat;
+    box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
+  }
 }
 
 .menu-logo-nav {
@@ -573,6 +942,9 @@ img {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
   line-height: 1;
 }
 
@@ -581,7 +953,7 @@ img {
   color: #000;
 }
 
-.form-label-subscribe {
+.footer-label-subscribe {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
@@ -593,6 +965,7 @@ img {
   border-radius: 30px;
   padding: 10px;
   min-width: 279px;
+  background-color: #ffffff;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
@@ -634,13 +1007,137 @@ img {
 }
 
 .description-page-footer {
+  text-align: center;
   font-size: 10px;
 }
 
-@media (min-resolution: 192dpi) {
+@media (max-width: 767px) and (min-resolution: 192dpi) {
   .site-footer {
-    background: url(../images/mobile/apple-b@2.png) 0 20.6% no-repeat,
-      url(../images/mobile/citrus-b@2.png) 100% 0 no-repeat,
-      url(../images/mobile/apple-banan-b@2.png) 50% 100% no-repeat;
+    background: url(../images/mobile/citrus-b@2.png) 100% 0 / 30% no-repeat,
+      url(../images/mobile/apple-b@2.png) 0 25% / 30% no-repeat,
+      url(../images/mobile/apple-banan-b@2.png) 50% 100% / 75% no-repeat;
+    box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
+  }
+}
+
+/* ========== FOOTER 768px ======================================== */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .site-footer {
+    padding: 100px 32px;
+    background: url(../images/tablet/citrus-b.png) 100% 0 no-repeat,
+      url(../images/tablet/apple-banan-b.png) 50% 100% no-repeat;
+    box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-logo-nav {
+    align-items: center;
+    gap: 114px;
+  }
+
+  .footer-list-nav {
+    flex-direction: row;
+  }
+
+  .footer-link-item-nav {
+    font-weight: 400;
+  }
+
+  .footer-form-input-email {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 12px;
+  }
+
+  .footer-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 13px;
+  }
+
+  .footer-input-email {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .footer-btn-subscription {
+    height: 42px;
+    margin-bottom: 0;
+  }
+
+  .description-footer {
+    font-size: 12px;
+    margin-bottom: 100px;
+  }
+
+  .footer-documentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .list-documention {
+    justify-content: start;
+    gap: 20px;
+    margin-bottom: 0;
+  }
+
+  .site-documention {
+    font-size: 12px;
+  }
+
+  .description-page-footer {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) and (min-resolution: 192dpi) {
+  .site-footer {
+    background: url(../images/tablet/citrus-b@2.png) 100% 0 / 27% no-repeat,
+      url(../images/tablet/apple-banan-b@2.png) 50% 100% / 100% no-repeat;
+    box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
+  }
+}
+
+/* ========== FOOTER 1280px ======================================== */
+@media (min-width: 1280px) {
+  .site-footer {
+    padding: 100px 16px;
+    background: url(../images/desktop/apple-banan-b.png) 50% 100% / 95%
+      no-repeat;
+    box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
+  }
+
+  .container-footer-logo-nav-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+  }
+
+  .menu-logo-nav {
+    gap: 148px;
+    margin-bottom: 0;
+  }
+
+  .container-footer-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description-footer {
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1280px) and (min-resolution: 192dpi) {
+  .site-footer {
+    background: url(../images/desktop/apple-banan-b@2.png) 50% 100% / 95%
+      no-repeat;
+    box-shadow: 0 -4px 24px 0 rgba(105, 105, 105, 0.1);
   }
 }
